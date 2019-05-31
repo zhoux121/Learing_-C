@@ -1,0 +1,7 @@
+﻿  cashRegister.c
+c:\users\xiaoxin zhou\desktop\新建文件夹\ipc\ipc-workshops-master\ws02\in_lab\cashregister.c(17): warning C4305: “初始化”: 从“double”到“const float”截断
+c:\users\xiaoxin zhou\desktop\新建文件夹\ipc\ipc-workshops-master\ws02\in_lab\cashregister.c(18): warning C4305: “初始化”: 从“double”到“const float”截断
+c:\users\xiaoxin zhou\desktop\新建文件夹\ipc\ipc-workshops-master\ws02\in_lab\cashregister.c(19): warning C4305: “初始化”: 从“double”到“const float”截断
+c:\users\xiaoxin zhou\desktop\新建文件夹\ipc\ipc-workshops-master\ws02\in_lab\cashregister.c(20): warning C4305: “初始化”: 从“double”到“const float”截断
+c:\users\xiaoxin zhou\desktop\新建文件夹\ipc\ipc-workshops-master\ws02\in_lab\cashregister.c(26): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+  in_lab.vcxproj -> C:\Users\Xiaoxin Zhou\Desktop\新建文件夹\ipc\IPC-Workshops-master\WS02\in_lab\Debug\in_lab.exe

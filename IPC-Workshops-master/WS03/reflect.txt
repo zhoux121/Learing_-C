@@ -1,0 +1,10 @@
+I use pseudo-code as a direct point how is my code outprint looks like
+like how many looping time I need and else stament I needed. But if I dont
+use pseudo-code for coding It might still works but when the question become
+harder I cant think with only using brain I might get worng if I dont pseudo it.
+
+I used for loop and while. while is runing for I dont know how many time am I going to
+enter a wrong number. for loop is runing as I knows how many days.
+
+NO, I only spend less than 10 mins to finish works.
+
