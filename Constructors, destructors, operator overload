@@ -1,0 +1,61 @@
+#define  _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include "string.h"
+#pragma once
+using namespace std;
+namespace sdds {
+	class String {
+		char* m_str;
+		int m_size;
+		void setempty() {
+			m_str = nullptr;
+			m_size = 0;
+		}
+	public:
+		String() {
+			setempty();
+		}
+		bool empty() const {
+			return m_str == nullptr || m_size == 0;
+		}
+		String(const char* str) {
+			setempty();
+			if (str) {
+				set(str);
+			}
+		}
+		bool operator>(const String& s) const{
+			bool r = false;
+			if (!empty() && !s.empty()) {
+				r = this->m_size > s.m_size;
+			}
+			cout << r << endl;
+			return r;
+		}
+		~String() {
+			delete[] m_str;
+			setempty();
+		}
+		void set(const char* str) {
+			delete[] m_str;
+			setempty();
+			m_size = strlen(str);
+			m_str = new char[m_size + 1];
+			strcpy(m_str, str);
+		}
+		void print() const {
+			cout << m_str << ":" << m_size << endl;
+		}
+	};
+}
+using namespace sdds;
+int main() {
+	String name;
+	name.set("xiaxin");
+	name.print();
+	String name0;
+	name0.set("xiaoxiao");
+	name0.print();
+	name0>(name);
+	return 0;
+}
