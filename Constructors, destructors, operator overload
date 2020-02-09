@@ -21,7 +21,7 @@ namespace sdds {
 		String(const char* str) {
 			setempty();
 			if (str) {
-				set(str);
+				(*this) = (str);
 			}
 		}
 		bool operator>(const String& s) const{
@@ -36,7 +36,18 @@ namespace sdds {
 			delete[] m_str;
 			setempty();
 		}
-		void set(const char* str) {
+
+		String& operator+=(const String& s) {
+			char* temp = new char[m_size + s.m_size + 1];
+			strcpy(temp, m_str);
+			strcat(temp, s.m_str);
+			delete[] m_str;
+			m_str = temp;
+			m_size += s.m_size;
+			return *this;
+		}
+
+		void operator=(const char* str) {
 			delete[] m_str;
 			setempty();
 			m_size = strlen(str);
@@ -50,12 +61,14 @@ namespace sdds {
 }
 using namespace sdds;
 int main() {
-	String name;
-	name.set("xiaxin");
+	String name = "xiaoxin";
 	name.print();
 	String name0;
-	name0.set("xiaoxiao");
+	name0="xiaoxiao";
 	name0.print();
 	name0>(name);
+	name += name0;
+	name.print();
 	return 0;
 }
+
